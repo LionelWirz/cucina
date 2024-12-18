@@ -21,13 +21,48 @@
         <div class="page right-page">
             <h1>Ricette Disponibili</h1>
             <ul class="recipe-list" id="recipe-list">
-                <li onclick="loadRecipe('Ricetta 1', 'Categoria: Piatto Principale', 'Ingredienti:...', 'Istruzioni:...')">Ricetta 1</li>
-                <li onclick="loadRecipe('Ricetta 2', 'Categoria: Dolce', 'Ingredienti:...', 'Istruzioni:...')">Ricetta 2</li>
-                <li onclick="loadRecipe('Ricetta 3', 'Categoria: Insalata', 'Ingredienti:...', 'Istruzioni:...')">Ricetta 3</li>
+                <li>
+                    Ricetta 1
+                    <button onclick="modifyRecipe('Ricetta 1')">Modifica</button>
+                    <button onclick="deleteRecipe('Ricetta 1')">Elimina</button>
+                </li>
+                <li>
+                    Ricetta 2
+                    <button onclick="modifyRecipe('Ricetta 2')">Modifica</button>
+                    <button onclick="deleteRecipe('Ricetta 2')">Elimina</button>
+                </li>
+                <li>
+                    Ricetta 3
+                    <button onclick="modifyRecipe('Ricetta 3')">Modifica</button>
+                    <button onclick="deleteRecipe('Ricetta 3')">Elimina</button>
+                </li>
             </ul>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        function loadRecipe(title, category, ingredients, instructions) {
+            const recipeDisplay = document.getElementById('recipe-display');
+            recipeDisplay.innerHTML = `
+                <h2>${title}</h2>
+                <h3>${category}</h3>
+                <h4>Ingredienti:</h4>
+                <p>${ingredients}</p>
+                <h4>Istruzioni:</h4>
+                <p>${instructions}</p>
+            `;
+        }
+
+        function modifyRecipe(recipeName) {
+            alert(`Modifica la ricetta: ${recipeName}`);
+            // Add your modify logic here
+        }
+
+        function deleteRecipe(recipeName) {
+            alert(`Elimina la ricetta: ${recipeName}`);
+            // Add your delete logic here
+        }
+    </script>
 </body>
 </html>
