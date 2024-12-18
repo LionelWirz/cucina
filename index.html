@@ -3,69 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>il bigino delle ricette</title>
+    <title>Il Bigino delle Ricette</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <header>
-        <h1>il bigino delle ricette</h1>
-        <nav>
-            <ul>
-                <li><a href="#">piatto principale</a></li>
-                <li><a href="#">insalate</a></li>
-                <li><a href="#">dolce</a></li>
-                <li><a href="#">panificio</a></li>
+    <div class="book-container">
+        <!-- Left Page: Recipe Display -->
+        <div class="page left-page">
+            <div class="recipe" id="recipe-display">
+                <h2>Benvenuto!</h2>
+                <p>Seleziona una ricetta dalla lista sulla destra per visualizzarla qui.</p>
+            </div>
+        </div>
+
+        <!-- Right Page: Recipe List -->
+        <div class="page right-page">
+            <h1>Ricette Disponibili</h1>
+            <ul class="recipe-list" id="recipe-list">
+                <li onclick="loadRecipe('Ricetta 1', 'Categoria: Piatto Principale', 'Ingredienti:...', 'Istruzioni:...')">Ricetta 1</li>
+                <li onclick="loadRecipe('Ricetta 2', 'Categoria: Dolce', 'Ingredienti:...', 'Istruzioni:...')">Ricetta 2</li>
+                <li onclick="loadRecipe('Ricetta 3', 'Categoria: Insalata', 'Ingredienti:...', 'Istruzioni:...')">Ricetta 3</li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </div>
 
-    <main>
-        <article class="recipe">
-            <h2>ricetta 1</h2>
-            <h3>Categoria: piatto principale</h3>
-            <h4>ingredienti:</h4>
-            <ul>
-                <li>1. </li>
-                <li>2. </li>
-                <!-- More ingredients -->
-            </ul>
-            <h4>How to Cook:</h4>
-            <p>Step-by-step cooking instructions...</p>
-        </article>
-            <section class="add-recipe-form">
-                <h2>Aggiungi una nuova ricetta</h2>
-                <form action="submit_recipe.php" method="post">
-                    <div class="form-group">
-                        <label for="recipe-title">Titolo della Ricetta:</label>
-                        <input type="text" id="recipe-title" name="title" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="recipe-category">Categoria:</label>
-                        <select id="recipe-category" name="category">
-                            <option value="piatto principale">Piatto Principale</option>
-                            <option value="insalate">Insalate</option>
-                            <option value="dolce">Dolce</option>
-                            <option value="panificio">Panificio</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="recipe-ingredients">Ingredienti:</label>
-                        <textarea id="recipe-ingredients" name="ingredients" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="recipe-instructions">Istruzioni:</label>
-                        <textarea id="recipe-instructions" name="instructions" required></textarea>
-                    </div>
-                    <button type="submit">Aggiungi Ricetta</button>
-                </form>
-            </section>
-        </main>
-        
-
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Favorite Recipes. All Rights Reserved.</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -2,104 +2,64 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #fff;
-    padding: 1em 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-header h1 {
-    text-align: center;
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f4e3;
+}
+
+.book-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.page {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.left-page {
+    border-right: 2px solid #ddd;
+}
+
+.right-page {
+    background: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.recipe-list {
+    list-style: none;
     padding: 0;
 }
 
-nav ul li {
-    margin: 0 1em;
+.recipe-list li {
+    padding: 10px;
+    margin: 10px 0;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-main {
-    max-width: 800px; /* Central block width */
-    margin: 2em auto;
-    padding: 1em;
+.recipe-list li:hover {
+    background: #eaeaea;
 }
 
 .recipe {
-    background-color: #fff;
-    padding: 1em;
-    margin-bottom: 2em;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    color: #333;
 }
 
-.recipe h2, .recipe h3, .recipe h4 {
+.recipe h2 {
     margin-top: 0;
-}
-
-footer {
-    text-align: center;
-    padding: 1em 0;
-    background-color: #fff;
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
-}
-
-.add-recipe-form {
-    max-width: 800px;
-    margin: 2em auto;
-    padding: 1em;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.add-recipe-form h2 {
-    margin-top: 0;
-}
-
-.form-group {
-    margin-bottom: 1em;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5em;
-}
-
-.form-group input[type="text"],
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 0.5em;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.form-group textarea {
-    height: 100px;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
 }
